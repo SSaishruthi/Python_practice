@@ -1,0 +1,25 @@
+class Solution(object):
+    def majorityElement(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        max_len = (len(nums))/2
+        print(max_len)
+        lst_dict = {}
+        for i in nums:
+            try:
+                lst_dict[i] += 1
+            except:
+                lst_dict[i] = 1
+        
+        print(lst_dict)
+        for item,cnt in lst_dict.items():
+                if cnt > max_len:
+                    return item
+                    
+                    
+ x = Solution()
+ lst = [3,2,3]
+x.majorityElement(lst)
+      
